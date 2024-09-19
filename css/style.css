@@ -208,6 +208,12 @@ table {
     width: 100%;
     text-align: center;
     margin: 10px 0;
+    overflow: auto;
+}
+
+.table  {
+    width: 80%;
+    overflow-x: auto;
 }
 
 @media (max-width: 767px) {
