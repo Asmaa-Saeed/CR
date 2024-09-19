@@ -90,6 +90,7 @@ body.light-off .table{
 .crud {
     width: 80%;
     margin: auto;
+    overflow-x: hidden;
 }
 
 /* body.light-off form{
