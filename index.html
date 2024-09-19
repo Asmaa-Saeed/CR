@@ -15,10 +15,11 @@
         <h1>CRUDS</h1>
         <h3>Product Management System</h3>
         <div class="light">
-            <div class="moon"><i class="fa-solid fa-moon"></i></div>
-            <div class="sun"><i class="fa-solid fa-sun"></i></div>
-        </div>
+        <div class="moon"><i class="fa-solid fa-moon"></i></div>
+        <div class="sun"><i class="fa-solid fa-sun"></i></div>
     </div>
+    </div>
+
     <div class="container">
     <div class="inputs">
         <input type="text" id="title" placeholder="Title" required>
@@ -33,18 +34,18 @@
         <input type="text" id="category" placeholder="Category">
         <button id="create" >Create</button>
     </div>
-    <div class="outputs">
-        <div class="search-block">
-            <input type="text" onkeyup="searchData(this.value)" id="search" placeholder="Search">
-            <div class="btnSearch">
-                <button onclick="getSearchMode(this.id)" id="searchTitle">Search By Title</button>
-                <button onclick="getSearchMode(this.id)" id="searchCategory">Search By Category</button>
-            </div>
-        </div>
-        <div id="deleteAll"></div>
-    </div>
 </div>
     <div class="table">
+        <div class="outputs">
+            <div class="search-block">
+                <input type="text" onkeyup="searchData(this.value)" id="search" placeholder="Search">
+                <div class="btnSearch">
+                    <button onclick="getSearchMode(this.id)" id="searchTitle">Search By Title</button>
+                    <button onclick="getSearchMode(this.id)" id="searchCategory">Search By Category</button>
+                </div>
+            </div>
+            <div id="deleteAll"></div>
+        </div>
         <table>
             <tr>
                 <th>Id</th>

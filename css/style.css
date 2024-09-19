@@ -46,7 +46,8 @@ body.light-off .sun{
 .light i{
     font-size: 25px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 10px;
+    display: inline-block;
 }
 .light i:active{
     transform: scale(.9);
@@ -57,7 +58,7 @@ body.light-off .sun{
 
 body.light-off {
     background-color: #323232;
-    background-image: url(../images/background-night.webp);
+    background-image: url(../images/light-photo.avif);
     transition: .4s ease;
 }
 body.light-off input{
@@ -78,12 +79,14 @@ body.light-off button{
 } */
 body.light-off .container, 
 body.light-off .table{
-    background: rgba(255, 255, 255, 0.11);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(0.9px);
-    -webkit-backdrop-filter: blur(0.9px);
-    border: 1px solid rgba(255, 255, 255, 0.13);
+    /* From https://css.glass */
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.11);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(1.6px);
+-webkit-backdrop-filter: blur(1.6px);
+border: 1px solid rgba(255, 255, 255, 0.23);
 }
 
 
@@ -98,19 +101,25 @@ body.light-off .table{
 .header-content {
     text-align: center;
     text-transform: uppercase;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .header-content h1 {
-    filter: drop-shadow(0 0 2px #6495ed);
-    color:cornflowerblue ;
-    -webkit-filter: drop-shadow(0 0 2px #6495ed);
-    text-shadow: 1pc 2px 6px rgba(0, 0, 0, 0.1);
-    letter-spacing: 6px;
+    text-align: center;
+    font-size: 50px;
+    color: cornflowerblue;
+    -webkit-text-stroke: 1px #eaeaea;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
 }
 
+body.light-off .header-content h1  {
+    -webkit-text-stroke: 1px #fff;
+}
 .header-content h3 {
     font-weight:500;
+    font-size: 20px;
     color: #444;
     text-shadow: 1pc 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -147,14 +156,13 @@ input {
     outline: 0;
     background-color: transparent;
     /* background-color: #111; */
-    margin: 4px 0;
+    margin: 15px 0;
     padding: 5px;
     border-radius: 3px;
     font-size: 15px;
     transition: 0.3s;
     /* color: #fff;     */
 }
-
 
 
 .price > input {
@@ -240,7 +248,6 @@ table th {
 table th, table td {
     padding: 5px;
 }
-
 
 /* footer */
 
