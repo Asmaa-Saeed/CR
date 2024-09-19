@@ -92,7 +92,7 @@ create.onclick = function () {
     category: category.value.toLowerCase(),
   }
   
-  if (inputTitle.value != '' && inputPrice.value != '' && inputTaxes.value != '' && inputAds.value != ''  && category.value != '' ) {
+  if (title.value != '' || price.value != '' || taxes.value != '' || ads.value != ''  || category.value != '' ) {
     if (mood === "create") {
       if (newPro.count > 1) {
         for (let i = 0; i < newPro.count; i++) {
