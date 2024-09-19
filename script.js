@@ -26,6 +26,36 @@ let temp;
 title.focus();
 // console.log(title, price, taxes, ads, discount, total, count, category, create, searchTitle, searchCategory)
 
+document.addEventListener("DOMContentLoaded", ()=> {
+  
+  const moon = document.querySelector(".moon");
+  const sun = document.querySelector(".sun");
+  const body = document.body;
+  
+
+  const lightState = localStorage.getItem("lightState");
+  if(lightState){
+    body.classList.add(lightState);
+  }
+  
+  sun.addEventListener("click", () => {
+    sun.classList.add("light-on");
+    sun.style.display = "none ";
+    body.classList.remove("light-off");
+    moon.style.display = "block";
+    localStorage.setItem("lightState", "light-on" )
+  });
+  moon.addEventListener("click", () => {
+    moon.classList.remove("light-on");
+    moon.style.display = "none";
+    body.classList.add("light-off");
+    sun.style.display = "block";
+    localStorage.setItem("lightState", "light-off" )
+  });
+});
+
+
+
 function getTotal() {
   if (price.value != "") {
     let result = +price.value + +taxes.value + +ads.value - +discount.value;
@@ -33,7 +63,7 @@ function getTotal() {
     total.style.background = "red";
   } else {
     total.innerHTML = "";
-    total.style.background = "green";
+    total.style.background = "cornflowerblue";
   }
 }
 getTotal();
@@ -49,6 +79,8 @@ if (localStorage.getItem("product") !== null) {
 }
 
 create.onclick = function () {
+
+  
   let newPro = {
     title: title.value.toLowerCase(),
     price: price.value,
@@ -59,7 +91,8 @@ create.onclick = function () {
     count: count.value,
     category: category.value.toLowerCase(),
   }
-  if(title.value !== '' && title.price !== '' && ads.value !== '' && taxes.value !== ''&& category.value !== '' && newPro.count < 100){
+  
+
     if (mood === "create") {
       if (newPro.count > 1) {
         for (let i = 0; i < newPro.count; i++) {
@@ -69,19 +102,20 @@ create.onclick = function () {
         dataPro.push(newPro);
       }
       clearInput();
-    } else {
+    }
+     else {
       dataPro[temp] = newPro;
       mood = "create";
       create.innerHTML = "Create";
       count.style.display = "block";
     }
-
+  
     localStorage.setItem("product", JSON.stringify(dataPro));
     console.log(newPro);
     showData();
-  };
-  }
-  
+  } 
+
+
 
 /// clear input
 function clearInput() {

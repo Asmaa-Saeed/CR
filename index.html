@@ -3,15 +3,23 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUDS</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/icon.png" type="images/icon.png">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Product Management System</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div class="crud">
     <div class="header-content">
         <h1>CRUDS</h1>
-        <h3>Product management System</h3>
+        <h3>Product Management System</h3>
+        <div class="light">
+            <div class="moon"><i class="fa-solid fa-moon"></i></div>
+            <div class="sun"><i class="fa-solid fa-sun"></i></div>
+        </div>
     </div>
+    <div class="container">
     <div class="inputs">
         <input type="text" id="title" placeholder="Title" required>
         <div class="price">
@@ -23,7 +31,7 @@
         </div>
         <input type="number" id="count" placeholder="Count">
         <input type="text" id="category" placeholder="Category">
-        <button id="create">Create</button>
+        <button id="create" >Create</button>
     </div>
     <div class="outputs">
         <div class="search-block">
@@ -34,6 +42,9 @@
             </div>
         </div>
         <div id="deleteAll"></div>
+    </div>
+</div>
+    <div class="table">
         <table>
             <tr>
                 <th>Id</th>
@@ -48,12 +59,18 @@
                 <th>Delete</th>
             </tr>
             <tbody id="tbody">
-                
-                
             </tbody>
         </table>
     </div>
 </div>
+<footer>
+    <div class="social-media">
+        <a href="https://www.linkedin.com/in/asmaa-saeed-20a5a8274/"><div class="linkedin"><i  class="fa-brands fa-linkedin"></i></div></a>
+        <a href="https://github.com/Asmaa-Saeed "><div class="github"><i class="fa-brands fa-github"></i></div></a>
+        <a href="mailTo:asmaasaeed2082003@gmail.com"><div class="email"><i class="fa-solid fa-envelope"></i></div></a>
+    </div>
+    <p>Copyright &copy; 2024 Designed By <span class="designer">Asmaa Saeed </span></p>
+</footer>
 <script src="script.js"></script>
   </body>
   </html>
